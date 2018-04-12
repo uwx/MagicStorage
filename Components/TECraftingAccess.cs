@@ -11,13 +11,18 @@ using Terraria.ModLoader.IO;
 
 namespace MagicStorage.Components
 {
+	public static class HansenMSHolder
+	{
+		public const int NumStationSlots = 15;
+	}
+	
 	public class TECraftingAccess : TEStorageComponent
 	{
-		public Item[] stations = new Item[10];
+		public Item[] stations = new Item[HansenMSHolder.NumStationSlots];
 
 		public TECraftingAccess()
 		{
-			for (int k = 0; k < 10; k++)
+			for (int k = 0; k < HansenMSHolder.NumStationSlots; k++)
 			{
 				stations[k] = new Item();
 			}
