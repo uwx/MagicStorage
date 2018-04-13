@@ -199,7 +199,7 @@ namespace MagicStorage
 			stationZone.Width.Set(0f, 1f);
 			stationZone.Top.Set(100f, 0f);
 			stationZone.Height.Set(70f, 0f);
-			stationZone.SetDimensions(HansenMSHolder.NumStationSlots, 1);
+			stationZone.SetDimensions(HansenMSHolder.NumStationSlots, 1, -10);
 			basePanel.Append(stationZone);
 
 			recipeText.Top.Set(152f, 0f);

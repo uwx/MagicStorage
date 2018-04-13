@@ -14,7 +14,7 @@ namespace MagicStorage
 		public delegate void HoverItemSlot(int slot, ref int hoverSlot);
 		public delegate Item GetItem(int slot, ref int context);
 
-		private const int padding = 4;
+		private int padding = 4;
 		private int numColumns = 10;
 		private int numRows = 4;
 		private int hoverSlot = -1;
@@ -31,10 +31,11 @@ namespace MagicStorage
 			this.inventoryScale = scale;
 		}
 
-		public void SetDimensions(int columns, int rows)
+		public void SetDimensions(int columns, int rows, int padding = 4)
 		{
 			this.numColumns = columns;
 			this.numRows = rows;
+            this.padding = padding;
 		}
 
 		public override void Update(GameTime gameTime)
